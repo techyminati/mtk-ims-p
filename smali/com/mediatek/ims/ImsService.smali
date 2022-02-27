@@ -120,7 +120,7 @@
 
 .field private static final PROPERTY_IMS_REG_EXTINFO:Ljava/lang/String; = "ril.ims.extinfo"
 
-.field private static final VDBG:Z = false
+.field private static final VDBG:Z
 
 .field protected static final mLock:Ljava/lang/Object;
 

@@ -1474,7 +1474,7 @@
     if-eqz v0, :cond_1
 
     .line 924
-    new-instance v1, Lcom/android/internal/telephony/SmsResponse;
+    new-instance v1, Lcom/mediatek/ims/MtkSmsResponse;
 
     iget v2, p2, Landroid/hardware/radio/V1_0/SendSmsResult;->messageRef:I
 
@@ -1482,10 +1482,10 @@
 
     iget v4, p2, Landroid/hardware/radio/V1_0/SendSmsResult;->errorCode:I
 
-    invoke-direct {v1, v2, v3, v4}, Lcom/android/internal/telephony/SmsResponse;-><init>(ILjava/lang/String;I)V
+    invoke-direct {v1, v2, v3, v4}, Lcom/mediatek/ims/MtkSmsResponse;-><init>(ILjava/lang/String;I)V
 
     .line 925
-    .local v1, "ret":Lcom/android/internal/telephony/SmsResponse;
+    .local v1, "ret":Lcom/mediatek/ims/MtkSmsResponse;
     iget v2, p1, Landroid/hardware/radio/V1_0/RadioResponseInfo;->error:I
 
     if-nez v2, :cond_0
@@ -1502,7 +1502,7 @@
     invoke-virtual {v2, v0, p1, v1}, Lcom/mediatek/ims/ril/ImsRILAdapter;->processResponseDone(Lcom/mediatek/ims/ril/RILRequest;Landroid/hardware/radio/V1_0/RadioResponseInfo;Ljava/lang/Object;)V
 
     .line 930
-    .end local v1    # "ret":Lcom/android/internal/telephony/SmsResponse;
+    .end local v1    # "ret":Lcom/mediatek/ims/MtkSmsResponse;
     :cond_1
     return-void
 .end method

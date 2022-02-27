@@ -30,7 +30,7 @@
 
 .field private static final USER_ENTITY:Ljava/lang/String; = "user-entity"
 
-.field private static final VDBG:Z = false
+.field private static final VDBG:Z
 
 .field private static mConfHdler:Lcom/mediatek/ims/DefaultConferenceHandler;
 

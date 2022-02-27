@@ -1,5 +1,5 @@
 !!brut.androlib.meta.MetaInfo
-apkFileName: ImsService.apk
+apkFileName: ims-mtk-a12-smsfix-signed.apk
 compressionType: false
 doNotCompress:
 - dex

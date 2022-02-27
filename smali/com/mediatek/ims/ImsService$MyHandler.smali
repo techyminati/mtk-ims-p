@@ -326,9 +326,9 @@
     .line 2104
     iget-object v6, v5, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
 
-    check-cast v6, Lcom/android/internal/telephony/SmsResponse;
+    check-cast v6, Lcom/mediatek/ims/MtkSmsResponse;
 
-    iget v4, v6, Lcom/android/internal/telephony/SmsResponse;->mMessageRef:I
+    iget v4, v6, Lcom/mediatek/ims/MtkSmsResponse;->mMessageRef:I
 
     goto :goto_0
 
@@ -336,7 +336,7 @@
     :cond_0
     iget-object v6, v1, Lcom/mediatek/ims/ImsService$MyHandler;->this$0:Lcom/mediatek/ims/ImsService;
 
-    const-string v7, "handleMessage() : SmsResponse was null"
+    const-string v7, "handleMessage() : MtkSmsResponse was null"
 
     invoke-static {v6, v7}, Lcom/mediatek/ims/ImsService;->access$100(Lcom/mediatek/ims/ImsService;Ljava/lang/String;)V
 
