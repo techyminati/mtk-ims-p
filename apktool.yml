@@ -1,0 +1,24 @@
+!!brut.androlib.meta.MetaInfo
+apkFileName: ImsService.apk
+compressionType: false
+doNotCompress:
+- dex
+- arsc
+isFrameworkApk: false
+packageInfo:
+  forcedPackageId: '127'
+  renameManifestPackage: null
+sdkInfo:
+  minSdkVersion: '28'
+  targetSdkVersion: '28'
+sharedLibrary: false
+sparseResources: true
+unknownFiles: {}
+usesFramework:
+  ids:
+  - 1
+  tag: null
+version: 2.4.0-dirty
+versionInfo:
+  versionCode: '28'
+  versionName: '9'

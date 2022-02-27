@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" xmlns:androidprv="http://schemas.android.com/apk/prv/res/android" android:compileSdkVersion="28" android:compileSdkVersionCodename="9" android:sharedUserId="android.uid.phone" coreApp="true" package="com.mediatek.ims" platformBuildVersionCode="28" platformBuildVersionName="9">
+    <uses-permission android:name="android.permission.READ_PRECISE_PHONE_STATE"/>
+    <uses-permission android:name="android.Manifest.permission.READ_PRIVILEGED_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.BROADCAST_STICKY"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <permission android:label="IMS config provider read permission" android:name="com.mediatek.ims.config.provider.PERMISSION.READ" android:protectionLevel="signatureOrSystem"/>
+    <permission android:label="IMS config provider write permission" android:name="com.mediatek.ims.config.provider.PERMISSION.WRITE" android:protectionLevel="signatureOrSystem"/>
+    <application android:directBootAware="true" android:name="ImsApp" android:networkSecurityConfig="@xml/network_security_config" android:usesCleartextTraffic="true">
+        <provider android:authorities="com.mediatek.ims.config.provider" android:directBootAware="true" android:enabled="true" android:exported="true" android:name=".config.internal.ImsConfigProvider" android:readPermission="com.mediatek.ims.config.provider.PERMISSION.READ" android:writePermission="com.mediatek.ims.config.provider.PERMISSION.WRITE"/>
+        <uses-library android:name="com.mediatek.op.ims.common" android:required="false"/>
+        <uses-library android:name="com.mediatek.ims.oemplugin" android:required="false"/>
+        <uses-library android:name="com.mediatek.ims.plugin" android:required="false"/>
+        <uses-library android:name="com.mediatek.ims.legacy" android:required="false"/>
+        <service android:name=".MtkDynamicImsService" android:permission="android.permission.BIND_IMS_SERVICE">
+            <intent-filter>
+                <action android:name="android.telephony.ims.ImsService"/>
+            </intent-filter>
+        </service>
+    </application>
+    <protected-broadcast android:name="com.android.ims.IMS_SERVICE_DEREGISTERED"/>
+    <protected-broadcast android:name="com.android.ims.IMS_INCOMING_CALL_INDICATION"/>
+    <protected-broadcast android:name="mediatek.intent.action.lte.mwi"/>
+    <protected-broadcast android:name="android.intent.action.ims.conference"/>
+    <protected-broadcast android:name="com.mediatek.intent.action.ims.dialogEventPackage"/>
+    <protected-broadcast android:name="android.intent.action.ACTION_WIFI_ONLY_MODE"/>
+    <protected-broadcast android:name="com.mediatek.ims.config.action.CONFIG_UPDATE"/>
+    <protected-broadcast android:name="com.mediatek.ims.config.action.CONFIG_LOADED"/>
+    <protected-broadcast android:name="com.mediatek.ims.config.action.DYNAMIC_IMS_SWITCH_TRIGGER"/>
+    <protected-broadcast android:name="com.mediatek.ims.config.action.DYNAMIC_IMS_SWITCH_COMPLETE"/>
+    <protected-broadcast android:name="com.mediatek.ims.action.self_identify_update"/>
+    <protected-broadcast android:name="com.mediatek.ims.MTK_IMS_SERVICE_UP"/>
+</manifest>
