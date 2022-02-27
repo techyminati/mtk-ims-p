@@ -1,15 +1,14 @@
 Manifest-Version: 1.0
-Created-By: 9 (Oracle Corporation)
 
 Name: AndroidManifest.xml
-SHA-256-Digest: QHnRV33PuO2qFQVgbjwoJGyrzmGZMScac+03hiUBntc=
+SHA-256-Digest: gEx0z3LrVgSIpVdmgtjP7d1heZmeXs7c6tGplpcUTw0=
 
 Name: classes.dex
-SHA-256-Digest: E//8RqLoa/99cBfN5Z0hnteI9lyGOnE6xzc17Ebpa0k=
+SHA-256-Digest: J1ud0gOBM4WdbsWLA/N/BaAP/3ZRU6EW9Ry/G1Gc7oA=
 
 Name: res/xml/network_security_config.xml
-SHA-256-Digest: KZ029Nwov4o84GZboTSLb2UP7m/qIXRtsNglUhe/0m8=
+SHA-256-Digest: MR6q0dFIAR4D0sbFvt5l02fHBEqJZxWCi9GVOn0WlHo=
 
 Name: resources.arsc
-SHA-256-Digest: mhZ2dX4OQQ1r10rLDKNPnL+53asxo7mRAKkv7hYAqw8=
+SHA-256-Digest: JDgVaHrfMrc2bM3iO4nR4AwMJPpRLIfxkNXEDAjzlOU=
 

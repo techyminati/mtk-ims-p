@@ -46,7 +46,6 @@ import com.android.ims.internal.IImsMultiEndpoint;
 import com.android.ims.internal.IImsRegistrationListener;
 import com.android.ims.internal.IImsUt;
 import com.android.internal.telephony.CommandException;
-import com.android.internal.telephony.SmsResponse;
 import com.mediatek.gba.NafSessionKey;
 import com.mediatek.ims.OperatorUtils;
 import com.mediatek.ims.config.ImsConfigContract;
@@ -1528,9 +1527,9 @@ public class ImsService extends ImsServiceBase {
                     int messageRef = 0;
                     AsyncResult ar3 = (AsyncResult) msg.obj;
                     if (ar3.result != null) {
-                        messageRef = ((SmsResponse) ar3.result).mMessageRef;
+                        messageRef = ((MtkSmsResponse) ar3.result).mMessageRef;
                     } else {
-                        ImsService.this.log("handleMessage() : SmsResponse was null");
+                        ImsService.this.log("handleMessage() : MtkSmsResponse was null");
                     }
                     if (ar3.exception != null) {
                         ImsService.this.log("handleMessage() : SMS send failed");

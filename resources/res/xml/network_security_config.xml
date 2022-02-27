@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <network-security-config>
-    <base-config versionCode="true">
+    <base-config compileSdkVersionCodename="true">
         <trust-anchors>
-            <certificates minSdkVersion="system"/>
-            <certificates minSdkVersion="user"/>
+            <certificates versionName="system"/>
+            <certificates versionName="user"/>
         </trust-anchors>
     </base-config>
 </network-security-config>

@@ -7,7 +7,7 @@ import android.hardware.radio.V1_0.SendSmsResult;
 import android.os.AsyncResult;
 import android.os.Message;
 import com.android.internal.telephony.LastCallFailCause;
-import com.android.internal.telephony.SmsResponse;
+import com.mediatek.ims.MtkSmsResponse;
 import com.mediatek.internal.telephony.MtkCallForwardInfo;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -559,7 +559,7 @@ public class ImsRadioResponse extends ImsRadioResponseBase {
     public void sendImsSmsExResponse(RadioResponseInfo responseInfo, SendSmsResult sms) {
         RILRequest rr = this.mRil.processResponse(responseInfo);
         if (rr != null) {
-            SmsResponse ret = new SmsResponse(sms.messageRef, sms.ackPDU, sms.errorCode);
+            MtkSmsResponse ret = new MtkSmsResponse(sms.messageRef, sms.ackPDU, sms.errorCode);
             if (responseInfo.error == 0) {
                 sendMessageResponse(rr.mResult, ret);
             }
